@@ -160,14 +160,14 @@ export default function CoreBenefits() {
         {/* Mobile/Tablet Layout - Mockup with Background */}
         <div className="lg:hidden relative flex flex-col items-center max-w-4xl mx-auto">
           {/* Mockup Image with Low Opacity */}
-          <div className="absolute bottom-0 w-full flex justify-center">
+          <div className="absolute top-48 w-full flex justify-center">
             <Image
               src="/images/mockup.svg"
               alt="Tiwi Mobile App Mockup"
-              width={339}
-              height={706}
+              width={256}
+              height={552}
               priority
-              className="w-full h-auto object-cover opacity-30 select-none"
+              className="object-cover opacity-30 select-none"
               sizes="(max-width: 1024px) 0px, 339px"
               draggable="false"
               onContextMenu={(e) => e.preventDefault()}
@@ -191,7 +191,7 @@ function BenefitCard({ benefit }: { benefit: { icon: React.ReactNode; title: str
     <div className="flex flex-col w-full max-w-sm">
       {/* Header with icon */}
       <div
-        className="flex items-center px-6 py-6 rounded-t-2xl border border-[#1F261E] border-b-0"
+        className="flex items-center px-3 py-3 sm:px-6 sm:py-6 rounded-t-2xl border border-[#1F261E] border-b-0"
         style={{
           background: "linear-gradient(90deg, #010501 -9.52%, #269C00 152.78%)",
         }}
@@ -208,8 +208,8 @@ function BenefitCard({ benefit }: { benefit: { icon: React.ReactNode; title: str
       />
 
       {/* Content */}
-      <div className="flex flex-col gap-2 px-6 py-4 rounded-b-2xl border border-[#1F261E] border-t-0 bg-[#010501]">
-        <h3 className="text-white text-lg md:text-xl sm:text-xs font-semibold tracking-tight">
+      <div className="flex flex-col gap-2 sm:px-6 px-3 py-4 rounded-b-2xl border border-[#1F261E] border-t-0 bg-[#010501]">
+        <h3 className="text-white text-sm md:text-xl sm:text-lg font-semibold tracking-tight font-[Manrope]">
           {benefit.title}
         </h3>
         <p className="text-[#B5B5B5] text-sm md:text-base font-medium">
