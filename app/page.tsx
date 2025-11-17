@@ -1,4 +1,5 @@
 import FAQSection from "@/components/FAQsection";
+import GovernanceSection from "@/components/GovernanceSection";
 import HeroSection from "@/components/HomeHero";
 import LaunchLifecycle from "@/components/LaunchLifecycle";
 import PartnersSlider from "@/components/PartnersSlider";
@@ -13,6 +14,7 @@ export default function Home() {
       
      <HeroSection />
      <ProductModules />
+     <GovernanceSection />
      <ProtocolDashboard />
      <LaunchLifecycle />
      <PartnersSlider />
