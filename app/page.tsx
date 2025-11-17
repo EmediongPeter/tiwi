@@ -33,6 +33,7 @@ export default function Home() {
      <div id="how-it-works">
        <ProtocolDashboard />
      </div>
+     <HowItWorks />
      <div id="governance">
        <LaunchLifecycle />
      </div>
