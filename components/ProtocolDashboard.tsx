@@ -20,7 +20,7 @@ export default function DashboardStatsGrid() {
 
 
         <h2 className="mt-3 text-3xl md:text-3xl font-semibold leading-tight">
-          Real-Time Transparency, <br />  <h1 className="text-[#B1F128]">All in One Dashboard</h1>
+          Real-Time Transparency, <br />  <span className="text-[#B1F128]">All in One Dashboard</span>
         </h2>
 
         <p className="text-[#A3A3A3] mt-3 text-lg font-normal max-w-xl mx-auto">
