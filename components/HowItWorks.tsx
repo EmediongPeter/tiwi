@@ -266,16 +266,16 @@ export default function HowItWorks() {
             {/* Left side - Phone mockup */}
             <div className="relative flex-1 border-r border-[#1F261E]">
               <div
-                className="relative min-h-[628px] flex items-center justify-end pr-8"
+                className="relative min-h-[628px] flex items-center justify-end pr-8 h-full"
                 style={{
                   background:
                     "linear-gradient(180deg, rgba(5, 20, 1, 0.20) -8.9%, rgba(31, 122, 6, 0.20) 330.56%)",
                 }}
               >
-                <div className="relative w-[450px] h-[636px]">
+                <div className="relative w-[750px] h-[637px] flex items-center">
                   <Image
                     // src="https://api.builder.io/api/v1/image/assets/TEMP/19128a7c108f7f74b9b23062abe7afe703d5c060?width=1500"
-                    src="images/Android.svg"
+                    src="/images/iMockup - iPhone 15.svg"
                     alt="iPhone mockup showing TIWI app"
                     fill
                     className="object-contain"
@@ -315,7 +315,7 @@ export default function HowItWorks() {
                   "linear-gradient(180deg, rgba(5, 20, 1, 0.20) -8.9%, rgba(31, 122, 6, 0.20) 330.56%)",
               }}
             >
-              <div className="relative w-[280px] h-[240px] md:w-[457px] md:h-[388px]">
+              <div className="relative w-[457px] h-96 md:w-[457px] md:h-[388px]">
                 <Image
                   src="/images/iMockup - iPhone 15.svg"
                   alt="iPhone mockup showing TIWI app"
@@ -327,7 +327,7 @@ export default function HowItWorks() {
             </div>
 
             {/* Steps */}
-            <div className="flex flex-col">
+            <div className="flex flex-col absolute z-50 bg-[#010501] w-full" >
               {steps.map((step, index) => (
                 <div
                   key={index}
