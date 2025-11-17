@@ -44,11 +44,11 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-[#010501] py-20 px-6 flex flex-col items-center text-white">
+    <section className="w-full bg-[#0B0F0A] py-20 px-6 flex flex-col items-center text-white">
       
       {/* TOP LABEL + GREEN LINES */}
       <div className="flex flex-col items-center mb-10">
-        <div className="flex items-center gap-2 mb-4">
+        <div className="flex items-center gap-2 mb-6">
           <div className="border-l-2 border-[#B1F128] w-8 h-8 bg-linear-to-r from-[#B1F12873] to-[#010501]" />
           <span className="  text-[#B5B5B5] text-sm md:text-xl font-medium">
             FAQ
@@ -57,14 +57,14 @@ export default function FAQSection() {
         </div>
 
         {/* TITLE */}
-        <h2 className="text-center text-2xl md:text-xl font-semibold leading-7">
+        <h2 className="text-center text-2xl md:text-3xl font-semibold ">
           Frequently Asked <br />
           <span className="text-[#B1F128]">Questions</span>
         </h2>
       </div>
 
       {/* FAQ LIST */}
-      <div className="w-full max-w-2xl space-y-3">
+      <div className="w-full max-w-5xl space-y-3">
         {faqs.map((faq, index) => (
           <div
             key={index}

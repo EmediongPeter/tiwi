@@ -56,7 +56,7 @@ export default function LaunchLifecycle() {
       </div>
 
       {/* YOUR EXACT GRID — BUT BALANCED */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
 
         {/* FIRST ROW – 3 CARDS */}
         <div className="rounded-2xl h-full">
@@ -96,15 +96,15 @@ function PhaseCard({
 
       {/* Large Background Number */}
       <span
-        className={`absolute text-[360px] font-extrabold ${
+        className={`absolute text-[420px] font-extrabold ${
           data.number === "1" ? "text-[#156200]" : "text-[#1F261E]"
-        } -right-14 -top-18`}
+        } -right-14 -top-26`}
       >
         {data.number}
       </span>
 
       {/* Phase label */}
-      <span className="inline-flex bg-[#1F261E] items-center px-4 py-2  text-xs text-[#B1F128] mb-8 relative z-10 self-start">
+      <span className="inline-flex rounded-md bg-[#1F261E] items-center px-4 py-2  text-xs text-[#B1F128] mb-8 relative z-10 self-start">
         {data.title}
       </span>
 
@@ -117,7 +117,9 @@ function PhaseCard({
               alt={data.number === "1" && i === 0 ? "first item icon" : "checkmark badge"}
               width={14}
               height={14}
-              className="w-4 h-4 flex-shrink-0"
+              className="w-4 h-4 flex-shrink-0 select-none"
+              draggable="false"
+              onContextMenu={(e) => e.preventDefault()}
             />
             <span className="leading-tight">{item}</span>
           </li>

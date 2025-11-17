@@ -21,7 +21,7 @@ export default function PartnersSlider() {
   ];
 
   return (
-    <section className="bg-[#010501] py-20 text-center text-white">
+    <section className="bg-[#010501] py-20 pb-40 text-center text-white">
       <div className="flex flex-col items-center mb-4 px-6">
         <div className="flex items-center gap-2 mb-4">
           <div className="border-l-2 border-[#B1F128] w-8 h-8 bg-linear-to-r from-[#B1F12873] to-[#010501]" />
@@ -39,7 +39,7 @@ export default function PartnersSlider() {
       </div>
 
       {/* TRUE infinite seamless loop */}
-      <div className="overflow-hidden w-full mt-10">
+      <div className="overflow-hidden w-full mt-20">
         <div className="flex animate-scroll-left w-max">
           {/* Repeat the list 4× so it appears infinite */}
           {[...Array(4)].map((_, dupIndex) => (
@@ -51,7 +51,9 @@ export default function PartnersSlider() {
                   width={48}
                   height={48}
                   alt=""
-                  className="w-12 h-12 object-contain opacity-90 transition-transform"
+                  className="w-12 h-12 object-contain opacity-90 transition-transform select-none"
+                  draggable="false"
+                  onContextMenu={(e) => e.preventDefault()}
                 />
               ))}
             </div>

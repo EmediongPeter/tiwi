@@ -46,7 +46,9 @@ export default function Navbar() {
               src="/images/logo.svg"
               alt="TIWI Protocol"
               fill
-              className="object-contain"
+              className="object-contain select-none"
+              draggable="false"
+              onContextMenu={(e) => e.preventDefault()}
             />
           </div>
         </div>

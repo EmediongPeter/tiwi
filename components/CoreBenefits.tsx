@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function CoreBenefits() {
@@ -112,52 +114,36 @@ export default function CoreBenefits() {
         </div>
 
         {/* Desktop Layout - Cards around Phone */}
-        <div className="hidden lg:grid lg:grid-cols-3 gap-8 lg:gap-20 items-center max-w-6xl mx-auto">
+        <div className="hidden lg:grid lg:grid-cols-3 gap-8 lg:gap-20 items-center max-w-6xl mx-auto ">
           {/* Left Column - 3 cards */}
           <div className="flex flex-col gap-8">
             <BenefitCard benefit={benefits[0]} />
-            <div className="mt">
+            <div className="relative left-24">
               <BenefitCard benefit={benefits[1]} />
             </div>
             <BenefitCard benefit={benefits[2]} />
           </div>
 
           {/* Center - Phone Mockup */}
-
-          <div className="flex justify-center items-center">
-            <div className="relative w-80 h-[682.42px]">
-              {/* Phone frame */}
-              {/* <div className="absolute inset-0 rounded-[36px] border-2 border-white/75 bg-black shadow-2xl" /> */}
-
-              {/* Screen */}
-              {/* <div className="absolute left-[10px] top-[10px] w-[260px] h-[560px] rounded-[30px] overflow-hidden bg-gradient-to-br from-[#B1F128]/20 to-black">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/25 via-transparent to-transparent opacity-60" />
-              </div> */}
-              <div className="absolute left-[10px] top-[10px] rounded-[30px] overflow-hidden bg-gradient-to-br from-[#B1F128]/20 to-black">
-                <Image
-                  src="/images/mockup.svg"
-                  alt="Tiwi Mobile App Mockup"
-                  width={339}
-                  height={706}
-                  priority
-                  className="w-full h-full object-cover"
-                  sizes="(max-width: 1024px) 0px, 339px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-white/25 via-transparent to-transparent opacity-60" />
-              </div>
-
-              {/* Notch */}
-              {/* <div className="absolute left-1/2 -translate-x-1/2 top-3 w-24 h-7 bg-black rounded-full" /> */}
-
-              {/* Home indicator */}
-              {/* <div className="absolute left-1/2 -translate-x-1/2 bottom-2 w-24 h-1 bg-white rounded-full" /> */}
-            </div>
+          <div className="relative w-full h-full flex items-center justify-center">
+            {/* <div className="absolute inset-0 rounded-[36px] border-2 border-white/75 bg-black shadow-2xl" /> */}
+            {/* <div className="relative w-full h-full"> */}
+            <Image
+              src="/images/mockup.svg"
+              alt="Tiwi Mobile App Mockup"
+              fill
+              priority
+              className="object-cover ml h-[706px] select-none"
+              draggable="false"
+              onContextMenu={(e) => e.preventDefault()}
+            />
+            {/* </div> */}
           </div>
 
           {/* Right Column - 3 cards */}
           <div className="flex flex-col gap-8">
             <BenefitCard benefit={benefits[3]} />
-            <div className="mt">
+            <div className="relative right-28">
               <BenefitCard benefit={benefits[4]} />
             </div>
             <BenefitCard benefit={benefits[5]} />
@@ -165,10 +151,35 @@ export default function CoreBenefits() {
         </div>
 
         {/* Mobile/Tablet Layout - Stacked Cards */}
-        <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {/* <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {benefits.map((benefit, index) => (
             <BenefitCard key={index} benefit={benefit} />
           ))}
+            
+        </div> */}
+        {/* Mobile/Tablet Layout - Mockup with Background */}
+        <div className="lg:hidden relative flex flex-col items-center max-w-4xl mx-auto">
+          {/* Mockup Image with Low Opacity */}
+          <div className="absolute top-48 w-full flex justify-center">
+            <Image
+              src="/images/mockup.svg"
+              alt="Tiwi Mobile App Mockup"
+              width={256}
+              height={552}
+              priority
+              className="object-cover opacity-30 select-none"
+              sizes="(max-width: 1024px) 0px, 339px"
+              draggable="false"
+              onContextMenu={(e) => e.preventDefault()}
+            />
+          </div>
+
+          {/* Stacked Cards on Top of the Image */}
+          <div className="grid grid-cols-2 gap-3 mt-6 relative z-10">
+            {benefits.map((benefit, index) => (
+              <BenefitCard key={index} benefit={benefit} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -180,7 +191,7 @@ function BenefitCard({ benefit }: { benefit: { icon: React.ReactNode; title: str
     <div className="flex flex-col w-full max-w-sm">
       {/* Header with icon */}
       <div
-        className="flex items-center px-6 py-6 rounded-t-2xl border border-[#1F261E] border-b-0"
+        className="flex items-center px-3 py-3 sm:px-6 sm:py-6 rounded-t-2xl border border-[#1F261E] border-b-0"
         style={{
           background: "linear-gradient(90deg, #010501 -9.52%, #269C00 152.78%)",
         }}
@@ -197,8 +208,8 @@ function BenefitCard({ benefit }: { benefit: { icon: React.ReactNode; title: str
       />
 
       {/* Content */}
-      <div className="flex flex-col gap-2 px-6 py-4 rounded-b-2xl border border-[#1F261E] border-t-0 bg-[#010501]">
-        <h3 className="text-white text-lg md:text-xl font-semibold tracking-tight">
+      <div className="flex flex-col gap-2 sm:px-6 px-3 py-4 rounded-b-2xl border border-[#1F261E] border-t-0 bg-[#010501]">
+        <h3 className="text-white text-sm md:text-xl sm:text-lg font-semibold tracking-tight font-[Manrope]">
           {benefit.title}
         </h3>
         <p className="text-[#B5B5B5] text-sm md:text-base font-medium">
