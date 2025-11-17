@@ -9,24 +9,24 @@ function cn(...classes: Array<string | boolean | null | undefined>): string {
 export default function GovernanceSection() {
   const items = [
     {
+      image: "/images/governcard1.svg",
       title: "Create Proposals",
-      desc: "Initiate new ideas and protocol changes that drive TIWI’s next evolution.",
-      icon: "/images/icons/proposal.svg",
+      text: "Initiate new ideas and protocol changes that drive TIWI’s next evolution.",
     },
     {
+      image: "/images/governcard2.svg",
       title: "Vote with TWC Stake",
-      desc: "Use your governance tokens to support or reject community proposals.",
-      icon: "/images/icons/vote.svg",
+      text: "Use your governance tokens to support or reject community proposals.",
     },
     {
+      image: "/images/governcard3.svg",
       title: "Join Governance Rounds",
-      desc: "Initiate new ideas and protocol changes that drive TIWI’s next evolution.",
-      icon: "/images/icons/governance.svg",
+      text: "Initiate new ideas and protocol changes that drive TIWI’s next evolution.",
     },
     {
+      image: "/images/governcard4.svg",
       title: "View Treasury Activity",
-      desc: "Track every fund movement transparently. From inflows to DAO expenditures.",
-      icon: "/images/icons/treasury.svg",
+      text: "Track every fund movement transparently. From inflows to DAO expenditures.",
     },
   ];
 
@@ -50,65 +50,39 @@ export default function GovernanceSection() {
           <span className="text-lime-400">Future of TIWI</span>
         </h2>
 
-        <p className="text-[#A3A3A3] mt-4 text-sm max-w-xl mx-auto">
+        <p className="text-[#A3A3A3] mt-4 text-lg font-normal max-w-xl mx-auto">
           TIWI’s DAO lets users shape the protocol through proposal creation 
           and weighted voting using TWC.
         </p>
       </div>
 
-      {/* GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-        {items.map((item, i) => (
-          <div
-            key={i}
-            className={cn(
-              "rounded-xl p-6 bg-[#0C0F0C] border border-[#1A1F1A] relative overflow-hidden flex flex-col"
-            )}
-          >
-            {/* GLOW (behind content, above bg image) */}
-            <div
-              className="
-                absolute inset-0
-                rotate-[-9.444deg]
-                pointer-events-none
-                mix-blend-plus-lighter
-                blur-[27.38px]
-                bg-[linear-gradient(180deg,rgba(177,241,40,0.33)_-33.46%,rgba(177,241,40,0)_90.38%)]
-                z-5
-              "
-            />
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-2 mt-12">
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className="relative w-full h-[320px] rounded-xl overflow-hidden"
+        >
+          {/* Imported background image */}
+          <Image
+            src={item.image}
+            alt={item.title}
+            fill
+            className="w-auto h-auto select-none"
+            priority
+            draggable="false"
+            onContextMenu={(e) => e.preventDefault()}
+          />
 
-            {/* TOP: square with centered icon (content on top of bg) */}
-            <div className="w-full flex justify-center relative z-10">
-
-
-              {/* BACKGROUND IMAGE */}
-                <Image
-              src="/images/brick-gradient.svg"
-              alt="brick gradient"
-              fill
-              className="absolute inset-0 object-cover z-0"
-            />
-              <div className="w-[100px] aspect-square flex items-center justify-center overflow-hidden ">
-                <div className="w-14 h-14 flex items-center justify-center bg-[#121712] rounded-full">
-                  <Image 
-                  src={item.icon} 
-                  alt={item.title} 
-                  width={28} 
-                  height={28} 
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* BOTTOM: title + description */}
-            <div className="mt-4 flex-1 flex flex-col justify-center z-10">
-              <h3 className="text-lg font-medium mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
-            </div>
+          {/* Absolute text block (matches screenshot) */}
+          <div className="absolute bottom-6 left-6 right-6 text-white">
+            <h2 className="text-[16px] text-[#B1F128] font-semibold mb-1">{item.title}</h2>
+            <p className="text-[14px] font-light text-white/90 leading-snug">
+              {item.text}
+            </p>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
+    </div>
     </section>
   );
 }

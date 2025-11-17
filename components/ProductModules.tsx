@@ -100,7 +100,9 @@ function ModuleCard({ title, desc, img, className }: CardProps) {
         alt={title}
         width={600}
         height={400}
-        className="w-full h-48 object-cover transition-all duration-300"
+        className="w-full h-48 object-cover transition-all duration-300 select-none"
+        draggable="false"
+        onContextMenu={(e) => e.preventDefault()}
       />
 
       <div className="relative p-3 flex flex-col justify-end">

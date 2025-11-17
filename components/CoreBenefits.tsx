@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function CoreBenefits() {
@@ -131,7 +133,9 @@ export default function CoreBenefits() {
               alt="Tiwi Mobile App Mockup"
               fill
               priority
-              className="object-cover ml h-[706px]"  // <— KEY CHANGE
+              className="object-cover ml h-[706px] select-none"
+              draggable="false"
+              onContextMenu={(e) => e.preventDefault()}
             />
             {/* </div> */}
           </div>
@@ -163,8 +167,10 @@ export default function CoreBenefits() {
               width={339}
               height={706}
               priority
-              className="w-full h-auto object-cover opacity-30" // Set low opacity
+              className="w-full h-auto object-cover opacity-30 select-none"
               sizes="(max-width: 1024px) 0px, 339px"
+              draggable="false"
+              onContextMenu={(e) => e.preventDefault()}
             />
           </div>
 

@@ -9,9 +9,9 @@ export default function Footer() {
 
       {/* GREEN TOP GLOW BACKGROUND */}
       <div
-        className="absolute md:block hidden -top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 
-                   w-1/2 h-full rounded-full backdrop-blur-2xl blur-md
-                   bg-linear-to-b from-[#78A627] to-transparent pointer-events-none">
+        className="absolute md:block hidden -top-[40rem] left-1/2 -translate-x-1/2 -translate-y-1/3 
+                   w-[90%] h-[60rem] rounded-full blur-2xl
+                   bg-linear-to-b from-[#78A627] to-[#78A627] pointer-events-none">
       </div>
       <div className="md:hidden flex justify-end absolute top-0 right-0 w-full overflow-hidden pointer-events-none">
         <Image
@@ -19,12 +19,14 @@ export default function Footer() {
           alt="green glow top mobile"
           width={100}
           height={100}
-          className=" object-cover"
+          className=" object-cover select-none"
+          draggable="false"
+          onContextMenu={(e) => e.preventDefault()}
         />
 
       </div>
 
-      <div className="relative z-10 max-w-7xl md:px-10 py-20 flex flex-col md:flex-row gap-10 items-center justify-between text-white">
+      <div className="relative z-10 w-full md:px-36 py-20 flex flex-col md:flex-row gap-10  justify-between text-white">
         
         {/* LEFT LOGO SECTION */}
         <div className="space-y-4">
@@ -33,7 +35,9 @@ export default function Footer() {
             alt="TIWI Protocol Logo"
             width={150}
             height={150}
-            className="w-[140px] h-auto"
+            className="w-[140px] h-auto select-none"
+            draggable="false"
+            onContextMenu={(e) => e.preventDefault()}
           />
 
           <p className="text-sm text-gray-300">
@@ -42,7 +46,7 @@ export default function Footer() {
           </p>
         </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-28 ">
         {/* PRODUCT */}
         <div className="">
           <h4 className="font-semibold mb-4 text-white/90">Product</h4>
@@ -95,7 +99,9 @@ export default function Footer() {
         alt="footer decoration"
         width={400}
         height={400}
-        className="absolute md:block hidden bottom-0 right-0 w-[220px] md:w-[200px] "
+        className="absolute md:block hidden bottom-0 right-0 w-[220px] md:w-[200px] select-none"
+        draggable="false"
+        onContextMenu={(e) => e.preventDefault()}
       />
 
       {/* BOTTOM LEFT DECORATIVE IMAGE */}
@@ -104,15 +110,17 @@ export default function Footer() {
         alt="Ellipse-icon decoration"
         width={400}
         height={400}
-        className="absolute md:block hidden bottom-0 -left-4 w-[220px] md:w-[150px] "
+        className="absolute md:block hidden bottom-0 -left-4 w-[220px] md:w-[150px] select-none"
+        draggable="false"
+        onContextMenu={(e) => e.preventDefault()}
       />
 
 
       {/* GREEN BOTTOM GLOW BACKGROUND */}
       <div
-        className="absolute md:block hidden -bottom-75 left-1/2 -translate-x-1/2
-                   w-1/2 h-full rounded-full backdrop-blur-2xl blur-md
-                   bg-linear-to-t from-[#78A627] to-transparent pointer-events-none">
+        className="absolute md:block hidden -bottom-[60rem] left-1/2 -translate-x-1/2
+                   w-[90%] h-[60rem] rounded-full blur-2xl
+                   bg-linear-to-t from-[#78A627] to-[#78A627] pointer-events-none">
       </div>
     </footer>
   );

@@ -1,12 +1,14 @@
+"use client";
+
 import Image from "next/image";
 
 export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden bg-[#010501] pt-40 md:pt-48 pb-40 select-none">
       {/* Floating Leaves */}
-      <Image src="/images/Leave3.svg" alt="leaf" width={48} height={48} className="absolute left-72 top-120 w-10 h-10 opacity-80" />
-      <Image src="/images/Leave1.svg" alt="leaf" width={66} height={66} className="absolute right-64 top-20 w-20 h-12 opacity-80" />
-      <Image src="/images/Leave2.svg" alt="leaf" width={48} height={48} className="absolute left-[31.5%] top-46 w-10 h-10 opacity-60" />
+      <Image src="/images/Leave3.svg" alt="leaf" width={48} height={48} className="absolute left-72 top-120 w-10 h-10 opacity-80 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
+      <Image src="/images/Leave1.svg" alt="leaf" width={66} height={66} className="absolute right-64 top-20 w-20 h-12 opacity-80 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
+      <Image src="/images/Leave2.svg" alt="leaf" width={48} height={48} className="absolute left-[31.5%] top-46 w-10 h-10 opacity-60 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
 
       <div className="flex flex-col items-center text-center px-6">
         {/* Pill Tag */}
@@ -29,7 +31,7 @@ export default function HeroSection() {
 
         {/* CTA */}
         <button
-          className="bg-gradient-to-b from-[#C5FF85] to-[#7EFF43] text-black font-semibold px-8 py-3 rounded-full shadow-lg mb-10 hover:opacity-90 transition"
+          className="bg-linear-to-b from-[#C5FF85] to-[#7EFF43] text-black font-semibold px-8 py-3 rounded-full shadow-lg mb-10 hover:opacity-90 transition"
         >
           Launch App ➤
         </button>
@@ -38,7 +40,7 @@ export default function HeroSection() {
         <div className="flex items-center gap-6 mb-12">
         
 
-<Image src="/images/users.svg" alt="user" width={48} height={48} className="rounded-full w-32" />
+<Image src="/images/users.svg" alt="user" width={48} height={48} className="rounded-full w-32 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
 
           <div className="text-left text-white">
             <p className="text-2xl font-bold">2,000+</p>
@@ -48,8 +50,8 @@ export default function HeroSection() {
 
         {/* App Store Buttons */}
         <div className="flex items-center gap-4">
-          <Image src="/images/Android.svg" alt="Google Play" width={48} height={48} className="w-40 h-auto cursor-pointer" />
-          <Image src="/images/Apple.svg" alt="App Store" width={48} height={48} className="w-40 h-auto cursor-pointer" />
+          <Image src="/images/Android.svg" alt="Google Play" width={48} height={48} className="w-40 h-auto cursor-pointer select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
+          <Image src="/images/Apple.svg" alt="App Store" width={48} height={48} className="w-40 h-auto cursor-pointer select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
         </div>
 
         {/* Bottom Ribbon */}
@@ -75,7 +77,7 @@ export default function HeroSection() {
 
       {/* Phone Image */}
       <div className="absolute right-0 bottom-0 translate-y-10 w-[380px] md:w-[480px]">
-        <Image src="/images/Phonetiwi.svg" alt="App Preview" width={48} height={48} className="w-160 object-contain" />
+        <Image src="/images/Phonetiwi.svg" alt="App Preview" width={48} height={48} className="w-160 object-contain select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
       </div>
     </section>
   );

@@ -8,6 +8,7 @@ import ProtocolDashboard from "@/components/ProtocolDashboard";
 import WhatIsTiwi from "@/components/WhatIsTiwi";
 import CoreBenefits from "@/components/CoreBenefits";
 import Image from "next/image";
+import WalletSection from "@/components/WalletSection";
 
 
 export default function Home() {
@@ -21,6 +22,9 @@ export default function Home() {
      <CoreBenefits />
      <div id="modules">
        <ProductModules />
+     </div>
+     <div id="">
+     <WalletSection />
      </div>
      <div id="">
      <GovernanceSection />
