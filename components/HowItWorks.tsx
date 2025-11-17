@@ -274,7 +274,8 @@ export default function HowItWorks() {
               >
                 <div className="relative w-[450px] h-[636px]">
                   <Image
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/19128a7c108f7f74b9b23062abe7afe703d5c060?width=1500"
+                    // src="https://api.builder.io/api/v1/image/assets/TEMP/19128a7c108f7f74b9b23062abe7afe703d5c060?width=1500"
+                    src="images/Android.svg"
                     alt="iPhone mockup showing TIWI app"
                     fill
                     className="object-contain"
