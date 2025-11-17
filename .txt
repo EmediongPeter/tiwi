@@ -1,0 +1,17 @@
+<div className="flex justify-center items-center">
+            <div className="relative w-80 h-[682.42px]">
+              {/* Phone frame */}
+              <div className="absolute inset-0 rounded-[36px] border-2 border-white/75 bg-black shadow-2xl" />
+              
+              {/* Screen */}
+              <div className="absolute left-[10px] top-[10px] w-[260px] h-[560px] rounded-[30px] overflow-hidden bg-gradient-to-br from-[#B1F128]/20 to-black">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/25 via-transparent to-transparent opacity-60" />
+              </div>
+
+              {/* Notch */}
+              <div className="absolute left-1/2 -translate-x-1/2 top-3 w-24 h-7 bg-black rounded-full" />
+              
+              {/* Home indicator */}
+              <div className="absolute left-1/2 -translate-x-1/2 bottom-2 w-24 h-1 bg-white rounded-full" />
+            </div>
+          </div>
