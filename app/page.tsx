@@ -24,20 +24,25 @@ export default function Home() {
      <div id="modules">
        <ProductModules />
      </div>
+
+     <div id="how-it-works">
+     <HowItWorks />
+     </div>
+    
      <div id="">
      <WalletSection />
      </div>
-     <div id="">
+     <div id="governance">
      <GovernanceSection />
      </div>
-     <div id="how-it-works">
+     <div id="">
        <ProtocolDashboard />
      </div>
-     <HowItWorks />
-     <div id="governance">
+   
+     <div id="roadmap">
        <LaunchLifecycle />
      </div>
-     <div id="roadmap">
+     <div id="">
        <PartnersSlider />
      </div>
      <FAQSection />

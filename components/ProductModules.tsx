@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ProductModules() {
   return (
-    <section className="bg-[#010501] py-20 text-white px-6">
+    <section className="bg-[#010501] py-20 text-white px-6 font-normal">
       {/* Header */}
       <div className="text-center mb-16">
 
@@ -23,14 +23,14 @@ export default function ProductModules() {
           <span className="text-lime-400">Super App</span>
         </h2>
 
-        <p className="text-[#A3A3A3] mt-4 text-sm max-w-xl mx-auto">
+        <p className="text-[#A3A3A3] mt-4 text-lg max-w-xl mx-auto">
           Trade, earn, lend, pay, govern, and explore NFTs — all from one seamless
           multi-chain app built for modular freedom.
         </p>
       </div>
 
       {/* TOP ROW — FIXED LAYOUT */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
         {/* Trade & Earn (2 columns) */}
         <ModuleCard
           title="Trade & Earn"
@@ -57,7 +57,7 @@ export default function ProductModules() {
       </div>
 
       {/* BOTTOM ROW — FIXED LAYOUT */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto mt-6">
         <ModuleCard
           title="NFT Marketplace & P2P"
           desc="Buy, sell, stake NFTs, or trade directly with users through escrow-protected smart contracts for trust and flexibility."

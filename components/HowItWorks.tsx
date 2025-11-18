@@ -216,8 +216,8 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="relative w-full bg-[#010501] py-12 md:py-16 lg:py-20 px-4">
-      <div className="max-w-[1328px] mx-auto">
+    <section className="relative w-full bg-[#010501] py-12 md:py-16 md:pb-40 px-4">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col items-center gap-6 md:gap-10 mb-8 md:mb-12">
           {/* Decorative header with borders */}

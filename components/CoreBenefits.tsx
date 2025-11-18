@@ -80,7 +80,7 @@ export default function CoreBenefits() {
   ];
 
   return (
-    <section className="relative w-full bg-[#010501] py-16 md:py-24 px-4 overflow-hidden">
+    <section className="relative w-full bg-[#010501] py-16 md:py-36 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col items-center gap-8 md:gap-10 mb-12 md:mb-20">
