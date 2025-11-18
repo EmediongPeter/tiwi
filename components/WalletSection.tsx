@@ -52,42 +52,32 @@ export default function WalletSection() {
         </div>
 
         {/* ===================== BOTTOM-LEFT IMAGE ===================== */}
-        <div className="relative h-[420px] md:h-full bg-[#071303]">
+        <div className="relative w-full h-[170px] md:h-[300px] order-2 md:order-1">
           <Image
             src="/images/wallet2.svg"
-            alt="Coin Image"
+            alt="Lock Image"
             fill
-            className="object-contain p-16"
+            className="object-cover object-right"   // <-- makes image fill the height & width
             priority
           />
         </div>
 
         {/* ===================== BOTTOM-RIGHT TEXT ===================== */}
-        <div className="bg-[#0f1d0c] px-16 py-24 flex flex-col justify-center">
-          <h1 className="text-white text-[40px] font-semibold mb-4">
+        <div className="px-8 md:px-16 py-12 md:py-16 flex flex-col justify-center order-1 md:order-2">
+          <h1 className="text-white text-[20px] md:text-[40px] font-bold md:font-semibold mb-4">
             Flexible Gas Payments
           </h1>
 
-          <h3 className="text-[#c8f05f] text-xl font-medium mb-4">
+          <h3 className="text-[#c8f05f] text-sm md:text-2xl font-medium mb-4">
             Choose How You Pay for Gas
           </h3>
 
-          <p className="text-white/80 w-[75%] leading-relaxed text-lg font-medium">
+          <p className="font-medium text-white/80 w-[75%] leading-relaxed text-sm md:text-lg">
             Pay gas in native tokens, TWC, or the swap token. TIWI
             recommends the cheapest option and displays a live USD
             estimate before confirmation.
           </p>
         </div>
-      </div>
-
-      <div className="relative h-[160px] md:h-full md:hidden mt-5">
-        <Image
-          src="/images/wallet2.svg"
-          alt="Coin Image"
-          fill
-          className="object-cover"
-          priority
-        />
       </div>
     </section>
   );
