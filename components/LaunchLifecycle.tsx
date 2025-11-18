@@ -55,8 +55,22 @@ export default function LaunchLifecycle() {
         </h2>
       </div>
 
-      {/* YOUR EXACT GRID — BUT BALANCED */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
+      {/* Mobile: Horizontal Scroll */}
+      <div className="md:hidden -mx-6 px-6">
+        <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide">
+          {phases.map((phase, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-[calc(50%-4px)] snap-start first:ml-0"
+            >
+              <PhaseCard data={phase} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop: Grid Layout */}
+      <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
 
         {/* FIRST ROW – 3 CARDS */}
         <div className="rounded-2xl h-full">
