@@ -12,21 +12,25 @@ export default function GovernanceSection() {
       image: "/images/governcard1.svg",
       title: "Create Proposals",
       text: "Initiate new ideas and protocol changes that drive TIWI’s next evolution.",
+      text2: "Propose changes for TIWI’s growth.",
     },
     {
       image: "/images/governcard2.svg",
       title: "Vote with TWC Stake",
       text: "Use your governance tokens to support or reject community proposals.",
+      text2: "Vote on proposals with your tokens.",
     },
     {
       image: "/images/governcard3.svg",
       title: "Join Governance Rounds",
       text: "Initiate new ideas and protocol changes that drive TIWI’s next evolution.",
+      text2: "Propose changes that push TIWI forward.",
     },
     {
       image: "/images/governcard4.svg",
       title: "View Treasury Activity",
       text: "Track every fund movement transparently. From inflows to DAO expenditures.",
+      text2: "Clear tracking from inflows to DAO spend.",
     },
   ];
 
@@ -56,7 +60,7 @@ export default function GovernanceSection() {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-2 mt-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-2 mt-12">
       {items.map((item, index) => (
         <div
           key={index}
@@ -74,10 +78,14 @@ export default function GovernanceSection() {
           />
 
           {/* Absolute text block (matches screenshot) */}
-          <div className="absolute bottom-6 left-6 right-6 text-white">
+          <div className="absolute md:bottom-6 bottom-16 md:left-6 left-3 md:right-6 right-3 text-white">
             <h2 className="text-[16px] text-[#B1F128] font-semibold mb-1">{item.title}</h2>
-            <p className="text-[14px] font-light text-white/90 leading-snug">
+            <p className="text-[14px] font-light text-white/90 leading-snug hidden md:block">
               {item.text}
+            </p>
+
+            <p className="text-[12px] font-light text-white/90 leading-snug md:hidden">
+              {item.text2}
             </p>
           </div>
         </div>

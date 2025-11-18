@@ -216,8 +216,8 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="relative w-full bg-[#010501] py-12 md:py-16 lg:py-20 px-4">
-      <div className="max-w-[1328px] mx-auto">
+    <section className="relative w-full bg-[#010501] py-12 md:py-16 md:pb-40 px-4">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col items-center gap-6 md:gap-10 mb-8 md:mb-12">
           {/* Decorative header with borders */}
@@ -306,45 +306,46 @@ export default function HowItWorks() {
           </div>
 
           {/* Mobile/Tablet Layout */}
-          <div className="lg:hidden flex flex-col">
-            {/* Phone mockup */}
-            <div
-              className="relative w-full pt-12 flex justify-center items-center"
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(5, 20, 1, 0.20) -8.9%, rgba(31, 122, 6, 0.20) 330.56%)",
-              }}
-            >
-              <div className="relative w-[457px] h-96 md:w-[457px] md:h-[388px]">
-                <Image
-                  src="/images/iMockup - iPhone 15.svg"
-                  alt="iPhone mockup showing TIWI app"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-            </div>
+<div className="lg:hidden flex flex-col">
+  {/* Phone mockup */}
+  <div
+    className="relative w-full pt-12 flex justify-center items-center"
+    style={{
+      background:
+        "linear-gradient(180deg, rgba(5, 20, 1, 0.20) -8.9%, rgba(31, 122, 6, 0.20) 330.56%)",
+    }}
+  >
+    <div className="relative w-[280px] h-[320px] sm:w-[350px] sm:h-[380px]">
+      <Image
+        src="/images/iMockup - iPhone 15.svg"
+        alt="iPhone mockup showing TIWI app"
+        fill
+        className="object-contain"
+        priority
+      />
+    </div>
+  </div>
 
-            {/* Steps */}
-            <div className="flex flex-col absolute z-50 bg-[#010501] w-full" >
-              {steps.map((step, index) => (
-                <div
-                  key={index}
-                  className={`flex items-center gap-3 md:gap-4 px-4 py-4 md:px-6 md:py-6 border-t border-[#1F261E] ${
-                    index === steps.length - 1 ? "" : "border-b"
-                  }`}
-                >
-                  <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#121712] flex-shrink-0">
-                    {step.icon}
-                  </div>
-                  <p className="text-[#B5B5B5] text-sm md:text-base font-medium flex-1">
-                    {step.title}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+  {/* Steps list below phone (vertical) */}
+  <div className="flex flex-col bg-[#010501] w-full">
+    {steps.map((step, index) => (
+      <div
+        key={index}
+        className={`flex items-center gap-3 px-4 py-4 border-t border-[#1F261E] ${
+          index !== steps.length - 1 ? "border-b" : ""
+        }`}
+      >
+        <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#121712] flex-shrink-0">
+          {step.icon}
+        </div>
+        <p className="text-[#B5B5B5] text-sm font-medium flex-1">
+          {step.title}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
+
         </div>
 
         {/* Buttons */}

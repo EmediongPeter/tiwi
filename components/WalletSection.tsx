@@ -79,6 +79,16 @@ export default function WalletSection() {
           </p>
         </div>
       </div>
+
+      <div className="relative h-[160px] md:h-full md:hidden mt-5">
+        <Image
+          src="/images/wallet2.svg"
+          alt="Coin Image"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
     </section>
   );
 }

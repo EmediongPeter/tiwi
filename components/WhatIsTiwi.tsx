@@ -1,11 +1,19 @@
+"use client";
+
+import Image from "next/image";
+
 export default function WhatIsTiwi() {
   return (
-    <section className="relative w-full bg-[#051401] py-16 md:py-20 px-4 md:px-0 rounded-b-3xl overflow-hidden">
-      {/* Decorative blobs */}
-      <div className="absolute right-8 md:right-32 top-20 w-8 h-8 md:w-12 md:h-12 rounded-full bg-gradient-radial from-[#B1F128] to-[#466B06] opacity-60 blur-sm" />
-      <div className="absolute left-8 md:left-20 top-32 w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-radial from-[#B1F128] to-[#466B06] opacity-40 blur-md" />
-      <div className="absolute right-16 md:right-48 -top-4 w-10 h-10 md:w-14 md:h-14 rounded-full bg-gradient-radial from-[#B1F128] to-[#466B06] opacity-50 blur-md" />
+    <section className="relative md:w-10/12 w-11/12 mx-auto bg-[#051401] py-16 md:py-40 px-4 md:px-20 rounded-b-3xl overflow-hidden">
+    
+      
+      {/* Floating Leaves */}
+      <Image src="/images/Leave3.svg" alt="leaf" width={48} height={48} className="absolute hidden md:block right-58 top-120 w-10 h-10 opacity-80 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
+      <Image src="/images/Leave3.svg" alt="leaf" width={66} height={66} className="absolute hidden md:block right-64 -top-5 w-20 h-12 opacity-80 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
+      <Image src="/images/Leave1.svg" alt="leaf" width={48} height={48} className="absolute hidden md:block left-[11.5%] top-56 w-10 h-10 opacity-60 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
 
+      
+      
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-6 md:gap-10">
         {/* Label with decorative borders */}
         <div className="flex items-center justify-center gap-1 md:gap-2">
@@ -28,12 +36,12 @@ export default function WhatIsTiwi() {
 
         {/* Main heading */}
         <h2 className="text-center text-2xl md:text-[40px] font-semibold leading-tight md:leading-tight tracking-tight md:tracking-[-0.04em] max-w-3xl">
-          <span className="text-white">Your Entire DeFi Experience in </span>
+          <span className="text-white">Your Entire DeFi Experience in </span> <br/>
           <span className="text-[#B1F128]">One Super App</span>
         </h2>
 
         {/* Description */}
-        <p className="text-[#B5B5B5] text-center text-base md:text-xl font-medium leading-relaxed md:leading-[160%] max-w-4xl px-4 md:px-0">
+        <p className="text-[#B5B5B5] text-center text-base md:text-xl font-medium leading-relaxed md:leading-[160%] max-w-5xl px-4 md:px-0">
           TIWI Protocol is a multi-chain DeFi Super App that combines trading, lending, yield, payments, NFTs, governance, and developer tools in one platform. Built mobile-first, it features a non-custodial wallet and a flexible relayer-powered gas system, letting users transact easily across multiple chains.
         </p>
       </div>

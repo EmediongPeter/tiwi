@@ -14,35 +14,38 @@ import HowItWorks from "@/components/HowItWorks";
 
 export default function Home() {
   return (
-    <div className="font-[Manrope] font-black text-4xl">
+    <div className="font-[Manrope] font-black text-4xl overflow-hidden">
 
-      <HeroSection />
-      <div id="about">
-        <WhatIsTiwi />
-      </div>
-      <CoreBenefits />
-      <div id="modules">
-        <ProductModules />
-      </div>
-      <div id="">
-        <WalletSection />
-      </div>
-      <div id="">
-        <GovernanceSection />
-      </div>
-      <div id="">
-        <ProtocolDashboard />
-      </div>
-      <div id="how-it-works">
-        <HowItWorks />
-      </div>
-      <div id="governance">
-        <LaunchLifecycle />
-      </div>
-      <div id="roadmap">
-        <PartnersSlider />
-      </div>
-      <FAQSection />
+     <HeroSection />
+     <div id="about">
+       <WhatIsTiwi />
+     </div>
+     <CoreBenefits />
+     <div id="modules">
+       <ProductModules />
+     </div>
+
+     <div id="how-it-works">
+     <HowItWorks />
+     </div>
+    
+     <div id="">
+     <WalletSection />
+     </div>
+     <div id="governance">
+     <GovernanceSection />
+     </div>
+     <div id="">
+       <ProtocolDashboard />
+     </div>
+   
+     <div id="roadmap">
+       <LaunchLifecycle />
+     </div>
+     <div id="">
+       <PartnersSlider />
+     </div>
+     <FAQSection />
     </div>
   );
 }
