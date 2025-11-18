@@ -14,7 +14,7 @@ import HowItWorks from "@/components/HowItWorks";
 
 export default function Home() {
   return (
-    <div className="font-[Manrope] font-black text-4xl">
+    <div className="font-[Manrope] font-black text-4xl overflow-hidden">
 
      <HeroSection />
      <div id="about">

@@ -4,13 +4,13 @@ import Image from "next/image";
 
 export default function WhatIsTiwi() {
   return (
-    <section className="relative w-10/12 mx-auto bg-[#051401] py-16 md:py-40 px-4 md:px-20 rounded-b-3xl overflow-hidden">
+    <section className="relative md:w-10/12 w-11/12 mx-auto bg-[#051401] py-16 md:py-40 px-4 md:px-20 rounded-b-3xl overflow-hidden">
     
       
       {/* Floating Leaves */}
-      <Image src="/images/Leave3.svg" alt="leaf" width={48} height={48} className="absolute right-58 top-120 w-10 h-10 opacity-80 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
-      <Image src="/images/Leave3.svg" alt="leaf" width={66} height={66} className="absolute right-64 -top-5 w-20 h-12 opacity-80 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
-      <Image src="/images/Leave1.svg" alt="leaf" width={48} height={48} className="absolute left-[11.5%] top-56 w-10 h-10 opacity-60 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
+      <Image src="/images/Leave3.svg" alt="leaf" width={48} height={48} className="absolute hidden md:block right-58 top-120 w-10 h-10 opacity-80 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
+      <Image src="/images/Leave3.svg" alt="leaf" width={66} height={66} className="absolute hidden md:block right-64 -top-5 w-20 h-12 opacity-80 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
+      <Image src="/images/Leave1.svg" alt="leaf" width={48} height={48} className="absolute hidden md:block left-[11.5%] top-56 w-10 h-10 opacity-60 select-none" draggable="false" onContextMenu={(e) => e.preventDefault()} />
 
       
       

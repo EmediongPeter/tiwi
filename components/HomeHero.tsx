@@ -11,7 +11,7 @@ export default function HeroSection() {
         alt="leaf"
         width={48}
         height={48}
-        className="absolute left-72 top-150 w-10 h-10 opacity-80 select-none"
+        className="absolute md:left-72 md:top-150 top-100 w-10 h-10 opacity-80 select-none"
         draggable="false"
         onContextMenu={(e) => e.preventDefault()}
       />
@@ -20,7 +20,7 @@ export default function HeroSection() {
         alt="leaf"
         width={66}
         height={66}
-        className="absolute right-64 top-50 w-20 h-12 opacity-80 select-none"
+        className="absolute md:right-64 right-0 top-50 w-20 h-12 opacity-80 select-none"
         draggable="false"
         onContextMenu={(e) => e.preventDefault()}
       />
@@ -29,16 +29,16 @@ export default function HeroSection() {
         alt="leaf"
         width={48}
         height={48}
-        className="absolute left-[31.5%] top-84 w-10 h-10 opacity-60 select-none"
+        className="absolute left-[31.5%] md:top-84 top-58 w-10 h-10 opacity-60 select-none"
         draggable="false"
         onContextMenu={(e) => e.preventDefault()}
       />
 
       <div className="flex flex-col items-center text-center px-6">
         {/* Pill Tag */}
-        <div className="mb-8 text-[#E7E7E7B2] border border-[#CEFF8B]/20 rounded-full px-6 py-2 text-sm tracking-wide flex items-center gap-2">
+        <div className="md:mb-8 mb-14 text-[#E7E7E7B2] border border-[#CEFF8B]/20 rounded-full md:px-6 px-2 py-2 md:text-sm text-xs tracking-wide flex items-center gap-2">
           <img src="/images/sparkle.svg" alt="" className="w-4 h-4" />
-          Multi chain. Non custodial. Mobile first. Mainnet ready.
+          Multi chain. Non custodial. Mobile first.
         </div>
 
         {/* Title */}
@@ -46,7 +46,7 @@ export default function HeroSection() {
           <h1 className="text-white">
             Powering the{" "}
             <span className="relative inline-block">
-              <span className="absolute inset-0 bg-[#7FB041]/50 h-7 top-1/2 -translate-y-1/2 -z-10"></span>
+              <span className="absolute inset-0 bg-[#7FB041]/50 md:h-7 h-6 top-1/2 -translate-y-1/2 -z-10"></span>
               Next Evolution
             </span>{" "}
             of
@@ -128,38 +128,46 @@ export default function HeroSection() {
         </div>
 
         {/* Bottom Ribbon */}
-        <div className="mt-48 relative w-screen flex flex-col justify-center">
-          <div className="w-[140%] rotate-[4deg] bg-linear-to-r from-[#B1F128]/50 to-[#668B17]/50 h-24 px-4 flex text-black font-semibold text-center"></div>
+        <div className="md:mt-48 mt-66 relative md:w-screen w-[150%] flex flex-col justify-center">
+          <div className="w-[140%] md:rotate-[4deg] rotate-[5deg] z-20 md:z-0 bg-linear-to-r from-[#B1F128]/50 to-[#668B17]/50 md:h-24 h-14 px-4 flex text-black font-semibold text-center"></div>
 
-          <div className="w-[140%] absolute -top-12 rotate-[-4deg] bg-linear-to-r from-[#C5FF85] to-[#7EFF43] py-6 px-[15%] flex gap-52 text-black font-semibold text-center">
+          <div className="w-[140%] absolute md:-top-12 -top-5 z-30 md:z-0 md:rotate-[-4deg] rotate-[-8deg] bg-linear-to-r from-[#C5FF85] to-[#7EFF43] md:py-6 py-3 md:px-[15%] px-[20%] flex gap-6 md:gap-52 text-black font-semibold text-center">
             <div className="text-left">
-              <p className="text-2xl font-bold">24/7</p>
-              <p className="text-sm font-normal">Protocol Status</p>
+              <p className="md:text-2xl text-lg font-bold">24/7</p>
+              <p className="md:text-sm text-xs font-normal">Protocol Status</p>
             </div>
             <div className="text-left">
-              <p className="text-2xl font-bold">$10m</p>
-              <p className="text-sm font-normal">Trading Volume</p>
+              <p className="md:text-2xl text-lg font-bold">$10m</p>
+              <p className="md:text-sm text-xs font-normal">Trading Volume</p>
             </div>
             <div className="text-left">
-              <p className="text-2xl font-bold">56+</p>
-              <p className="text-sm font-normal">Supported chains</p>
+              <p className="md:text-2xl text-lg font-bold">56+</p>
+              <p className="md:text-sm text-xs font-normal">Supported chains</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Phone Image */}
-      <div className="absolute right-20 bottom-10 translate-y-10 w-[380px] md:w-[580px]">
-        <Image
-          src="/images/Phonetiwi.svg"
-          alt="App Preview"
-          width={48}
-          height={48}
-          className="w-[90rem] object-contain select-none"
-          draggable="false"
-          onContextMenu={(e) => e.preventDefault()}
-        />
-      </div>
+<div
+  className="
+    absolute 
+    left-1/2 -translate-x-1/2 
+    bottom-10 translate-y-10
+    w-[340px] md:w-[580px]
+    md:right-20 md:left-auto md:translate-x-0
+  "
+>
+  <Image
+    src="/images/Phonetiwi.svg"
+    alt="App Preview"
+    width={48}
+    height={48}
+    className="w-[90rem] object-contain select-none"
+    draggable="false"
+    onContextMenu={(e) => e.preventDefault()}
+  />
+</div>
 
       {/* Background Image Behind Everything */}
       <Image
