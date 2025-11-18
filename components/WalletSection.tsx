@@ -34,7 +34,7 @@ export default function WalletSection() {
             Your Keys. Your Wallet. Your World
           </h3>
 
-          <p className="font-medium text-white/80 w-[75%] leading-relaxed text-sm md:text-lg">
+          <p className="font-medium text-white/80 md:w-[75%] leading-relaxed text-sm md:text-lg">
             Create or import a non-custodial multi-chain wallet secured
             by biometrics and PIN. Connect easily to all dApps within TIWI
           </p>
@@ -72,7 +72,7 @@ export default function WalletSection() {
             Choose How You Pay for Gas
           </h3>
 
-          <p className="font-medium text-white/80 w-[75%] leading-relaxed text-sm md:text-lg">
+          <p className="font-medium text-white/80 md:w-[75%] leading-relaxed text-sm md:text-lg">
             Pay gas in native tokens, TWC, or the swap token. TIWI
             recommends the cheapest option and displays a live USD
             estimate before confirmation.
