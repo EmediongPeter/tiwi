@@ -37,7 +37,7 @@ export default function LaunchLifecycle() {
   ];
 
   return (
-    <section className="bg-[#010501] py-20 text-white px-6">
+    <section className="bg-[#010501] md:py-20 text-white px-6">
       {/* Header */}
       <div className="text-center mb-16">
          <div className="flex items-center justify-center gap-2 mb-4">
@@ -61,7 +61,7 @@ export default function LaunchLifecycle() {
           {phases.map((phase, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[calc(50%-4px)] snap-start first:ml-0"
+              className="flex-shrink-0 w-[calc(50%-14px)] snap-start first:ml-0"
             >
               <PhaseCard data={phase} />
             </div>
@@ -110,9 +110,9 @@ function PhaseCard({
 
       {/* Large Background Number */}
       <span
-        className={`absolute text-[420px] font-extrabold ${
+        className={`absolute text-[170px] md:text-[420px] font-extrabold ${
           data.number === "1" ? "text-[#156200]" : "text-[#1F261E]"
-        } -right-14 -top-26`}
+        } md:-right-14 md:-top-26 -right-6 -top-12`}
       >
         {data.number}
       </span>
@@ -125,7 +125,7 @@ function PhaseCard({
       {/* Items with a small icon between each */}
       <ul className="space-y-1 relative z-10">
         {data.items.map((item, i) => (
-          <li key={i} className="flex items-center text-[#B5B5B5] text-sm gap-3 py-1">
+          <li key={i} className="flex items-center text-[#B5B5B5] text-sm gap-3">
             <Image
               src={data.number === "1" && i === 0 ? "/images/checkmark-badge-01.svg" : "/images/checkmark-badge.svg"}
               alt={data.number === "1" && i === 0 ? "first item icon" : "checkmark badge"}
@@ -135,7 +135,7 @@ function PhaseCard({
               draggable="false"
               onContextMenu={(e) => e.preventDefault()}
             />
-            <span className="leading-tight">{item}</span>
+            <span className="text-sm font-medium">{item}</span>
           </li>
         ))}
       </ul>
