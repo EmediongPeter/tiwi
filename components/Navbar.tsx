@@ -88,6 +88,7 @@ export default function Navbar() {
 
         {/* Mobile Hamburger Menu */}
         <button
+          ref={buttonRef}
           className="md:hidden flex items-center justify-center w-6 h-6"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
