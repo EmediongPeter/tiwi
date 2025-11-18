@@ -147,6 +147,7 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
         <div
+          ref={menuRef}
           className="md:hidden absolute top-full left-0 right-0 mt-2 mx-4 rounded-3xl overflow-hidden"
           style={{
             background: "#010501",
