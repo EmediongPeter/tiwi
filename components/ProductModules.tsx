@@ -30,7 +30,7 @@ export default function ProductModules() {
       </div>
 
       {/* TOP ROW — FIXED LAYOUT */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto min-h-[400px]">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto min-h-[420px]">
         {/* Trade & Earn (2 columns) */}
         <ModuleCard
           title="Trade & Earn"
@@ -93,22 +93,47 @@ interface CardProps {
 function ModuleCard({ title, desc, img, className }: CardProps) {
   return (
     <div
-      className={`flex flex-col bg-[#0B0E0C] rounded-xl overflow-hidden h-full min-h-[200px] ${className}`}
+      className={`
+        relative
+        bg-[#0B0E0C]
+        rounded-2xl
+        overflow-hidden
+        h-full min-h-[300px]
+        flex flex-col justify-end
+        ${className}
+      `}
     >
+      {/* Background Image */}
       <Image
         src={img}
         alt={title}
-        width={600}
-        height={400}
-        className="w-full h-48 object-cover object-top transition-all duration-300 select-none"
+        width={1000}
+        height={1000}
+        className="
+          absolute inset-0 w-full h-full object-cover object-top
+          opacity-60
+          select-none pointer-events-none
+        "
         draggable="false"
-        onContextMenu={(e) => e.preventDefault()}
       />
 
-      <div className="relative p-3 flex flex-col justify-end">
-        <h3 className="text-lg text-[#ffffff] font-medium mb-2">{title}</h3>
-        <p className="text-sm text-[#B5B5B5] leading-snug">{desc}</p>
+      {/* Bottom → Top soft gradient */}
+      <div
+        className="
+          absolute inset-0
+          bg-gradient-to-t
+          from-black/60
+          via-black/40
+          to-transparent
+        "
+      />
+
+      {/* Content pinned at bottom */}
+      <div className="relative z-10 p-6 flex flex-col items-start gap-2">
+        <h3 className="text-xl text-white font-semibold">{title}</h3>
+        <p className="text-sm text-zinc-400 leading-snug">{desc}</p>
       </div>
     </div>
   );
 }
+
