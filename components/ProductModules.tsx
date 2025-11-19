@@ -18,7 +18,7 @@ export default function ProductModules() {
 
 
         <h2 className="mt-6 text-3xl font-semibold leading-snug">
-          All-in-One DeFi 
+          All-in-One DeFi
           <br />
           <span className="text-lime-400">Super App</span>
         </h2>
@@ -45,7 +45,7 @@ export default function ProductModules() {
           desc="Deposit assets or borrow securely with real-time health tracking."
           img="/images/modules/lending.svg"
           className="md:flex-col-reverse"
-         
+
         />
 
         {/* TIMIPay */}
@@ -93,31 +93,17 @@ interface CardProps {
 function ModuleCard({ title, desc, img, className }: CardProps) {
   return (
     <div
-      className={`
-        relative
-        bg-[#0B0E0C]
-        rounded-2xl
-        overflow-hidden
-        h-full min-h-[300px]
-        flex flex-col justify-end
-        ${className}
-      `}
+      className={`flex flex-col bg-[#0B0E0C] rounded-xl overflow-hidden h-full min-h-[200px] justify-center items-center ${className}`}
     >
-      {/* Background Image */}
       <Image
         src={img}
         alt={title}
-        width={1000}
-        height={1000}
-        className="
-          absolute inset-0 w-full h-full object-cover object-top
-          opacity-60
-          select-none pointer-events-none
-        "
+        width={600}
+        height={400}
+        className="w-full h-48 object-cover object-top transition-all duration-300 select-none "
         draggable="false"
+        onContextMenu={(e) => e.preventDefault()}
       />
-
-      {/* Bottom → Top soft gradient */}
       <div
         className="
           absolute inset-0
@@ -130,10 +116,9 @@ function ModuleCard({ title, desc, img, className }: CardProps) {
 
       {/* Content pinned at bottom */}
       <div className="relative z-10 p-6 flex flex-col items-start gap-2">
-        <h3 className="text-xl text-white font-semibold">{title}</h3>
-        <p className="text-sm text-zinc-400 leading-snug">{desc}</p>
+        <h3 className="text-lg text-[#ffffff] font-medium mb-2">{title}</h3>
+        <p className="text-sm text-[#B5B5B5] leading-snug">{desc}</p>
       </div>
     </div>
   );
 }
-
