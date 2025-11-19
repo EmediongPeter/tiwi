@@ -51,7 +51,7 @@ export default function LaunchLifecycle() {
         <h2 className="mt-6 text-3xl font-semibold leading-snug">
           From Core to Cosmos
           <br />
-          <span className="text-lime-400">The Evolution of TIWI</span>
+          <span className="text-lime-400">The Evolution of TIWI Protocol</span>
         </h2>
       </div>
 

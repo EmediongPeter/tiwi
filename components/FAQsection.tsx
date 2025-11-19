@@ -5,7 +5,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "Is TIWI custodial?",
+    question: "Is TIWI Wallet custodial?",
     answer:
       "No. TIWI Wallet is fully non-custodial — you control your keys.",
   },

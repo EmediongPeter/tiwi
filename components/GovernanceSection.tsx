@@ -11,19 +11,18 @@ export default function GovernanceSection() {
     {
       image: "/images/governcard1.svg",
       title: "Create Proposals",
-      text: "Initiate new ideas and protocol changes that drive TIWI’s next evolution.",
+      text: "Initiate new ideas and protocol changes that drive TIWI Protocol next evolution.",
       text2: "Propose changes for TIWI’s growth.",
     },
     {
       image: "/images/governcard2.svg",
-      title: "Vote with TWC Stake",
+      title: "Vote with TIWICAT Stake",
       text: "Use your governance tokens to support or reject community proposals.",
-      text2: "Vote on proposals with your tokens.",
     },
     {
       image: "/images/governcard3.svg",
       title: "Join Governance Rounds",
-      text: "Initiate new ideas and protocol changes that drive TIWI’s next evolution.",
+      text: "Initiate new ideas and protocol changes that drive TIWI Protocol next evolution.",
       text2: "Propose changes that push TIWI forward.",
     },
     {
@@ -50,13 +49,12 @@ export default function GovernanceSection() {
         </div>
 
         <h2 className="mt-6 text-3xl font-semibold leading-snug">
-          Govern the{" "}
-          <span className="text-lime-400">Future of TIWI</span>
+          Governing the{" "}
+          <span className="text-lime-400">Future of TIWI Protocol</span>
         </h2>
 
         <p className="text-[#A3A3A3] mt-4 text-lg font-normal max-w-xl mx-auto">
-          TIWI’s DAO lets users shape the protocol through proposal creation 
-          and weighted voting using TWC.
+          TIWI Protocol DAO lets users shape the protocol through proposal creation and weighted voting using TIWICAT (TWC).
         </p>
       </div>
 

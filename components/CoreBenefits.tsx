@@ -26,7 +26,7 @@ export default function CoreBenefits() {
         </svg>
       ),
       title: "Flexible Gas Payments",
-      description: "Pay gas in native tokens, TWC, or the swap token.",
+      description: "Pay gas in native tokens, TIWICAT (TWC), or the swap token.",
     },
     {
       icon: (
@@ -105,7 +105,7 @@ export default function CoreBenefits() {
           <div className="flex flex-col items-center gap-2">
             <h2 className="text-center text-3xl md:text-[40px] font-semibold leading-tight tracking-tight md:tracking-[-0.04em]">
               <span className="text-white">The Core of </span>
-              <span className="text-[#B1F128]">TIWI</span>
+              <span className="text-[#B1F128]">TIWI Protocol</span>
             </h2>
             <p className="text-[#B5B5B5] text-center text-base md:text-lg font-medium max-w-md">
               Everything you need to trade, earn, pay, and grow. All in one ecosystem.

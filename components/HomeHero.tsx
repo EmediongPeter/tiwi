@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import ComingSoon from "./ComingSoon";
+import HoverReveal from "./HoverReveal";
 
 export default function HeroSection() {
   return (
@@ -107,24 +109,33 @@ export default function HeroSection() {
 
         {/* App Store Buttons */}
         <div className="flex items-center gap-4">
-          <Image
-            src="/images/Android.svg"
-            alt="Google Play"
-            width={48}
-            height={48}
-            className="w-40 h-auto cursor-pointer select-none"
-            draggable="false"
-            onContextMenu={(e) => e.preventDefault()}
-          />
-          <Image
-            src="/images/Apple.svg"
-            alt="App Store"
-            width={48}
-            height={48}
-            className="w-40 h-auto cursor-pointer select-none"
-            draggable="false"
-            onContextMenu={(e) => e.preventDefault()}
-          />
+
+          <HoverReveal
+            hoverContent={<ComingSoon />}
+          >
+            <Image
+              src="/images/Android.svg"
+              alt="Google Play"
+              width={48}
+              height={48}
+              className="w-40 h-auto"
+              draggable="false"
+              onContextMenu={(e) => e.preventDefault()}
+            />
+          </HoverReveal>
+          <HoverReveal
+            hoverContent={<ComingSoon />}
+          >
+            <Image
+              src="/images/Apple.svg"
+              alt="App Store"
+              width={48}
+              height={48}
+              className="w-40 h-auto"
+              draggable="false"
+              onContextMenu={(e) => e.preventDefault()}
+            />
+          </HoverReveal>
         </div>
 
         {/* Bottom Ribbon */}
@@ -149,25 +160,25 @@ export default function HeroSection() {
       </div>
 
       {/* Phone Image */}
-<div
-  className="
+      <div
+        className="
     absolute 
     left-1/2 -translate-x-1/2 
     bottom-10 translate-y-10
-    w-[340px] md:w-[580px]
-    md:right-20 md:left-auto md:translate-x-0
+    w-[340px] md:w-[500px]
+    md:right-20 md:ml-36 md:translate-x-0 md:bottom-10
   "
->
-  <Image
-    src="/images/Phonetiwi.svg"
-    alt="App Preview"
-    width={48}
-    height={48}
-    className="w-[90rem] object-contain select-none"
-    draggable="false"
-    onContextMenu={(e) => e.preventDefault()}
-  />
-</div>
+      >
+        <Image
+          src="/images/promaxpro.svg"
+          alt="App Preview"
+          width={48}
+          height={48}
+          className="w-[90rem] object-contain select-none"
+          draggable="false"
+          onContextMenu={(e) => e.preventDefault()}
+        />
+      </div>
 
       {/* Background Image Behind Everything */}
       <Image

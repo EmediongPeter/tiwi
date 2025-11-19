@@ -30,11 +30,11 @@ export default function ProductModules() {
       </div>
 
       {/* TOP ROW — FIXED LAYOUT */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto min-h-[400px]">
         {/* Trade & Earn (2 columns) */}
         <ModuleCard
           title="Trade & Earn"
-          desc="Swap assets, provide liquidity, and earn yields. Manage all positions seamlessly."
+          desc="Swap assets, provide liquidity, and earn yields through farming and staking. Track earnings and manage LP positions seamlessly."
           img="/images/modules/trade.svg"
           className="md:col-span-2"
         />
@@ -52,7 +52,7 @@ export default function ProductModules() {
         <ModuleCard
           title="TIMIPay"
           desc="Send, receive, and automate crypto payments instantly."
-          img="/images/modules/pay.svg"
+          img="/images/modules/all.svg"
         />
       </div>
 
@@ -67,14 +67,14 @@ export default function ProductModules() {
 
         <ModuleCard
           title="Deal Brokerage & Launchpad"
-          desc="Post milestone-based deals or grow your project with fair launches, liquidity locks, and mentorship."
+          desc="Create a secure on chain space where projects can launch, raise funds, and execute milestone based deals through smart contract escrow."
           img="/images/modules/analytics.svg"
           className="md:col-span-2 "
         />
 
         <ModuleCard
           title="Governance & Analytics"
-          desc="Participate in TIWI’s DAO, create proposals, vote with TWC, and track your portfolio across all chains in real time."
+          desc="Participate in TIWI Protocol DAO, create proposals, vote with TWC, and track your portfolio across all chains in real time."
           img="/images/modules/deals.svg"
           className="md:flex-col-reverse"
         />
@@ -100,7 +100,7 @@ function ModuleCard({ title, desc, img, className }: CardProps) {
         alt={title}
         width={600}
         height={400}
-        className="w-full h-48 object-cover transition-all duration-300 select-none"
+        className="w-full h-48 object-cover object-top transition-all duration-300 select-none"
         draggable="false"
         onContextMenu={(e) => e.preventDefault()}
       />

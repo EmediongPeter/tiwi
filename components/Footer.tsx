@@ -79,7 +79,8 @@ export default function Footer() {
               <h4 className="font-semibold mb-4 text-white">Community</h4>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li><Link href="#">Telegram</Link></li>
-                <li><Link href="#">X (Twitter)</Link></li>
+                <li><Link href="#">X</Link></li>
+                <li><Link href="#">Email</Link></li>
                 <li><Link href="#">Documentation</Link></li>
               </ul>
             </div>
@@ -162,11 +163,12 @@ export default function Footer() {
 
             {/* COMMUNITY */}
             <div className="flex flex-col gap-[10px] w-[180px]">
-              <h4 className="text-white font-semibold text-base leading-normal">Community</h4>
+              <h4 className="text-white font-semibold text-base leading-normal">Contact</h4>
               <ul className="flex flex-col gap-[10px]">
                 <li><Link href="#" className="text-[#B5B5B5] text-sm font-medium leading-normal hover:text-white transition-colors">Telegram</Link></li>
-                <li><Link href="#" className="text-[#B5B5B5] text-sm font-medium leading-normal hover:text-white transition-colors">X (Twitter)</Link></li>
-                <li><Link href="#" className="text-[#B5B5B5] text-sm font-medium leading-normal hover:text-white transition-colors">Documentation</Link></li>
+                <li><Link href="#" className="text-[#B5B5B5] text-sm font-medium leading-normal hover:text-white transition-colors">X</Link></li>
+                <li><Link href="#" className="text-[#B5B5B5] text-sm font-medium leading-normal hover:text-white transition-colors">Email</Link></li>
+                <li><Link href="#" className="text-[#B5B5B5] text-sm font-medium leading-normal hover:text-white transition-colors">Docs</Link></li>
               </ul>
             </div>
           </div>

@@ -36,7 +36,7 @@ export default function WalletSection() {
 
           <p className="font-medium text-white/80 md:w-[75%] leading-relaxed text-sm md:text-lg">
             Create or import a non-custodial multi-chain wallet secured
-            by biometrics and PIN. Connect easily to all dApps within TIWI
+            by biometrics and PIN. Connect easily to all dApps within TIWI Protocol
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export default function WalletSection() {
         {/* ===================== BOTTOM-LEFT IMAGE ===================== */}
         <div className="relative w-full h-[170px] md:h-[300px] order-2 md:order-1">
           <Image
-            src="/images/wallet2.svg"
+            src="/images/tiwicat-coin.svg"
             alt="Lock Image"
             fill
             className="object-cover object-right"   // <-- makes image fill the height & width
@@ -73,9 +73,7 @@ export default function WalletSection() {
           </h3>
 
           <p className="font-medium text-white/80 md:w-[75%] leading-relaxed text-sm md:text-lg">
-            Pay gas in native tokens, TWC, or the swap token. TIWI
-            recommends the cheapest option and displays a live USD
-            estimate before confirmation.
+            Pay gas in native tokens, TIWICAT (TWC), or the swap token. TIWI Protocol recommends the cheapest option and displays a live USD estimate before confirmation
           </p>
         </div>
       </div>

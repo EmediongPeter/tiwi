@@ -42,7 +42,7 @@ export default function WhatIsTiwi() {
 
         {/* Description */}
         <p className="text-[#B5B5B5] text-center text-base md:text-xl font-medium leading-relaxed md:leading-[160%] max-w-5xl px-4 md:px-0">
-          TIWI Protocol is a multi-chain DeFi Super App that combines trading, lending, yield, payments, NFTs, governance, and developer tools in one platform. Built mobile-first, it features a non-custodial wallet and a flexible relayer-powered gas system, letting users transact easily across multiple chains.
+          TIWI Protocol is a multi-chain DeFi Super App that unifies trading, lending, yield, payments, NFTs, governance, decentralised P2P transfers, deal brokerage, payroll, developer tools, and more. It’s mobile-first, non-custodial, and powered by a flexible relayer system that makes multi-chain transactions seamless.
         </p>
       </div>
     </section>
