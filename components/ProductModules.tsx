@@ -93,14 +93,14 @@ interface CardProps {
 function ModuleCard({ title, desc, img, className }: CardProps) {
   return (
     <div
-      className={`flex flex-col bg-[#0B0E0C] rounded-xl overflow-hidden h-full min-h-[200px] justify-center items-center ${className}`}
+      className={`relative flex flex-col bg-[#0B0E0C] rounded-2xl overflow-hidden h-full min-h-[300px] justify-end ${className}`}
     >
       <Image
         src={img}
         alt={title}
         width={600}
         height={400}
-        className="w-full h-48 object-cover object-top transition-all duration-300 select-none "
+        className="w-full h-48 object-cover object-top transition-all duration-300 select-none opacity-60 inset-0 pointer-events-none"
         draggable="false"
         onContextMenu={(e) => e.preventDefault()}
       />
@@ -116,8 +116,55 @@ function ModuleCard({ title, desc, img, className }: CardProps) {
 
       {/* Content pinned at bottom */}
       <div className="relative z-10 p-6 flex flex-col items-start gap-2">
-        <h3 className="text-lg text-[#ffffff] font-medium mb-2">{title}</h3>
+        <h3 className="text-xl text-[#ffffff] font-semibold">{title}</h3>
         <p className="text-sm text-[#B5B5B5] leading-snug">{desc}</p>
+      </div>
+    </div>
+  );
+}
+
+function ModuleCard1({ title, desc, img, className }: CardProps) {
+  return (
+    <div
+      className={`
+        relative
+        bg-[#0B0E0C]
+        rounded-2xl
+        overflow-hidden
+        h-full min-h-[300px]
+        flex flex-col justify-end
+        ${className}
+      `}
+    >
+      {/* Background Image */}
+      <Image
+        src={img}
+        alt={title}
+        width={1000}
+        height={1000}
+        className="
+          absolute inset-0 w-full h-full object-cover object-top
+          opacity-60
+          select-none pointer-events-none
+        "
+        draggable="false"
+      />
+
+      {/* Bottom → Top soft gradient */}
+      <div
+        className="
+          absolute inset-0
+          bg-gradient-to-t
+          from-black/60
+          via-black/40
+          to-transparent
+        "
+      />
+
+      {/* Content pinned at bottom */}
+      <div className="relative z-10 p-6 flex flex-col items-start gap-2">
+        <h3 className="text-xl text-white font-semibold">{title}</h3>
+        <p className="text-sm text-zinc-400 leading-snug">{desc}</p>
       </div>
     </div>
   );
