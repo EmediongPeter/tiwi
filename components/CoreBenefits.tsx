@@ -129,7 +129,7 @@ export default function CoreBenefits() {
             {/* <div className="absolute inset-0 rounded-[36px] border-2 border-white/75 bg-black shadow-2xl" /> */}
             {/* <div className="relative w-full h-full"> */}
             <Image
-              src="/images/mockup.svg"
+              src="/images/mockup2.svg"
               alt="Tiwi Mobile App Mockup"
               fill
               priority
@@ -162,7 +162,7 @@ export default function CoreBenefits() {
           {/* Mockup Image with Low Opacity */}
           <div className="absolute top-48 w-full flex justify-center">
             <Image
-              src="/images/mockup.svg"
+              src="/images/mockup2.svg"
               alt="Tiwi Mobile App Mockup"
               width={256}
               height={552}
